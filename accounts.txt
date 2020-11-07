@@ -1,2 +1,3 @@
 admin,admin
 chamie,123
+stephanie,1120

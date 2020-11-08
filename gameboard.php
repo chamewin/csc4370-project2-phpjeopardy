@@ -175,7 +175,7 @@ if(!isset($_COOKIE[$cookie_name])) {
                     <div class="value"><a href='card.php?id=forms-100'>$100</a></div>
 
                     <div class="question">Question</div>
-                    <div class="answer">WAnswer</div>
+                    <div class="answer">Answer</div>
                 </div>
             </div>
             <div class="cell-group grid-cell" data-row="1" data-col="3">

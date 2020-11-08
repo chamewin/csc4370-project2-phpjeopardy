@@ -6,8 +6,14 @@
 
 
 
+    z
 
-    <a href='card.php?id=tables-100'>$100</a>
+    <a
+            href="?id=<?php echo $row['floorid'];?>#floor"
+            data-toggle="tab"
+            id="<?php echo $row['floorid'];?>">
+        <?php echo $row['floorname'];?>
+    </a>
 
 
     <div class="box">

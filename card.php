@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Buy Your Way to a Better Education!</title>
-    <link href="buyagrade.css" type="text/css" rel="stylesheet"/>
+    <title>Questions</title>
+    <link href="questions.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -10,6 +10,16 @@
 
 
 <pre>
+<!--    --><?php //score.session_start();
+//    error_reporting(0);
+//    $cookie_name = "score";
+//    echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];
+//
+//
+//?>
+
+
+</pre>
 
     <?php
     $id = $_GET['id'];
@@ -357,7 +367,9 @@ else if($id == "media-500"){ ?>
 
 
 
-
+<center><?php
+    echo "YOUR SCORE IS " .$_COOKIE["score"];
+    ?></center>
 
 </body>
 </html>

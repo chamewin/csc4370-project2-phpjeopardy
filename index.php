@@ -13,7 +13,7 @@
                 src: url("fonts/gyparodyrg.ttf");
             }
             body {
-                height: 100vh;
+                hejohight: 100vh;
                 width: 100vw;
                 background-color: #2a3698;
             }
@@ -21,6 +21,10 @@
                 color: white;
                 text-align: center;
                 font: 10rem GyparodyHV, sans-serif;
+            }
+
+            form{
+                display: inline-block;
             }
             .btn {
                 border:none;

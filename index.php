@@ -13,7 +13,7 @@
                 src: url("fonts/gyparodyrg.ttf");
             }
             body {
-                hejohight: 100vh;
+                height: 100vh;
                 width: 100vw;
                 background-color: #2a3698;
             }

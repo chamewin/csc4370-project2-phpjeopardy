@@ -4,8 +4,43 @@
 <html>
 <head>
     <link href="board.css" rel="stylesheet" />
+    <style>
+        @font-face {
+            font-family: GyparodyRG;
+            src: url("fonts/gyparodyrg.ttf");
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            background: #2a3698;
+            overflow: hidden;
+        }
+        .header {
+            display: block;
+            margin: 2rem 1rem 0 0;
+        }
+        .header a {
+            color: #2a3698;
+            outline: 0;
+            background: #f2f2f2;
+            border: 0;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            box-sizing: border-box;
+            font: 2rem GyparodyRG, sans-serif;
+        }
+        .header p {
+            float: left;
+            margin-right: 2rem;
+            font: 2rem GyparodyRG, sans-serif;
+            color: white;
+        }
+        .right {
+            float: right;
+        }
+    </style>
 </head>
-<pre><center>
+
         <?php error_reporting(0);?>
 <?php score.session.session_start();
 $cookie_name = "score";
@@ -25,11 +60,15 @@ if(!isset($_COOKIE[$cookie_name])) {
 //setcookie(score, $cookie_value); // 86400 = 1 day
 //echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];
 ?>
-</pre>
-</center>
+
 
 <body>
-
+<div class="header">
+    <div class="right">
+        <p>Welcome, <?= $_SESSION['Username'] ?></p>
+        <a href="logout.php">Log Out</a>
+    </div>
+</div>
 <div id="gameplay">
     <div class="grid grid-play" style="height:100vh; ">
         <div class="grid-row grid-row-cats" style="">

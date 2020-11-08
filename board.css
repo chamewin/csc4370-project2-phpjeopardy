@@ -6,7 +6,7 @@ body {
     font-family: "Segoe UI", "Helvetica Neue", sans-serif;
     line-height: 1.5;
     color: #212529;
-	background-color: #1338BE;
+	background-color: #2a3698;
 	height:100%;
 	font-family: sans-serif;
     overflow-y:hidden;
@@ -16,8 +16,8 @@ a {
     color: yellow;
 }
 .grid {
-    padding:10px;
-    background: #1338BE;
+    padding:60px;
+    background: #2a3698;
     position:relative;
     transform-origin: center;
     font-size:24px;
@@ -35,7 +35,7 @@ a {
     border:3px solid black;
     overflow:hidden;
     position:relative;
-    background-color: #1338BE;
+    background-color: #2a3698;
     flex:1;
 }
 

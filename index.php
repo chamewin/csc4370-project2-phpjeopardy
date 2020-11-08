@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
@@ -18,7 +19,7 @@
                 background-color: #2a3698;
             }
             h1 {
-                color: white;
+                color: #ffffff;
                 text-align: center;
                 font: 10rem GyparodyHV, sans-serif;
             }

@@ -177,7 +177,7 @@ elseif (isset($_POST["tables-500"])) {
         $value = $cookie_value + 500;
         setcookie($cookie_name, $value);
         ?>
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
+<!--        //<center>YOUR SCORE IS --><?php //echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?><!--</center>-->
 
 
         <?php
@@ -368,7 +368,7 @@ elseif (isset($_POST["forms-200"])) {
         setcookie($cookie_name, $value);
         ?>
 
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
+        <center>YOUR SCORE IS: <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
 
 
         <?php

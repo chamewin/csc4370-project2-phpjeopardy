@@ -83,7 +83,7 @@ else if($id == "tables-400"){?>
 
                 <form action="answer.php" method="post">
                     <fieldset>
-                        <h2>What are two attributes define how far rows and columns reach in a table?</h2><br>
+                        <h2>What are two attributes define how far rows reach in a table?</h2><br>
 
                         <strong class="column">What is:</strong>
                         <input type="text" name="tables-500" size="17" maxlength="16" id="tables-500"><br><br>

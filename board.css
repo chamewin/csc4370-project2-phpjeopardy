@@ -2,18 +2,23 @@
     box-sizing:border-box;
 }
 body {
-    margin: 0;
-    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    font-family: "Permanent Marker";
     line-height: 1.5;
     color: #212529;
 	background-color: #2a3698;
 	height:100%;
-	font-family: sans-serif;
-    overflow-y:hidden;
 
+}
+h2{
+    text-align: center;
+}
+p{
+    text-align: center;
 }
 a {
     color: yellow;
+    text-decoration: none;
+    text-align: center;
 }
 .grid {
     padding:60px;
@@ -141,16 +146,12 @@ a {
 
 
 
-/*body {*/
-/*    font-family: Arial, sans-serif;*/
-/*    background: url(http://www.shukatsu-note.com/wp-content/uploads/2014/12/computer-564136_1280.jpg) no-repeat;*/
-/*    background-size: cover;*/
-/*    height: 100vh;*/
-/*}*/
+
 
 h1 {
     text-align: center;
-    font-family: Tahoma, Arial, sans-serif;
+    font-family: "Permanent Marker";
+    font-size: 100px;
     color: yellow;
     margin: 80px 0;
 }
@@ -160,9 +161,9 @@ h1 {
     margin: 0 auto;
     background: rgba(255,255,255,0.2);
     padding: 35px;
-    /*border: 2px solid #fff;*/
-    /*border-radius: 20px/50px;*/
-    /*background-clip: padding-box;*/
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
     text-align: center;
 }
 
@@ -236,4 +237,61 @@ h1 {
     .popup{
         width: 70%;
     }
+}
+.btn {
+    border:none;
+    display:inline-block;
+    padding:1rem 2rem;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+.white {
+    color:#000!important;
+    background-color:#fff!important;
+}
+.main {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.box1 {
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10%;
+}
+
+
+@keyframes animated-border {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255,255,255,0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(255,255,255,0);
+    }
+}
+
+#box1 {
+    animation: animated-border 1.5s infinite;
+    font-family: "Permanent Marker";
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
 }

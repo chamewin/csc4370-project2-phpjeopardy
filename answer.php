@@ -1,57 +1,28 @@
-<!DOCTYPE>
 <html>
 <head>
-    <link href="questions.css" rel="stylesheet" />
+    <?php include "head.php"?>
+    <link href="board.css" rel="stylesheet" />
+    <meta http-equiv = "refresh" content = "3; url = gameboard.php" />
 </head>
 <body>
-<?php error_reporting(E_ERROR | E_PARSE);
-
-//This will usually create a division by 0
-//warning message.
-echo 1 / 0;
-
-//This will usually create an array to string
-//notice message.
-echo array();
-
-
+<?php
+$cookie_name = "score";
+$cookie_value = 0;
+define($cookie_name, $_COOKIE[$cookie_name]);
 
 ?>
 
-<!---->
-<?php score.session.session_start();
+
+<?php score.session_start();
+
 error_reporting(E_ERROR | E_PARSE);
-$cookie_name = "score";
-$cookie_value = 0;
+
 setcookie($cookie_name, $cookie_value);
 
 
-//echo "VALUE: ".$_COOKIE[$cookie_name]."<br>";
-//$cookie_value = (int)$_COOKIE[$cookie_name]+100;
-//echo "PLUS: ".$cookie_value."<br>";
-//setcookie($cookie_name, $cookie_value);
-
-//echo "Your score is: ".$_COOKIE[$cookie_name];
 ?>
 <html>
 <body>
-
-<?php
-//if(!isset($_COOKIE[$cookie_name])) {
-//    echo "Cookie named '" . $cookie_name . "' is not set!";
-//} else {
-//    echo "Cookie " . $cookie_name . " is set!<br>";
-//    echo "Value is: " . $_COOKIE[$cookie_name];
-//    //$value = $_COOKIE[$cookie_name] + 100;
-//    $value = (int) $_COOKIE["$cookie_name"]++;
-//    echo $value."<br>";
-//    $value += 100;
-//    echo $value."<br>";
-//
-//    echo"value is: ".$_COOKIE[$cookie_name]+100;
-//}
-//?>
-
 
 <?php
 error_reporting(E_ERROR | E_PARSE);
@@ -79,8 +50,17 @@ if (isset($_POST["tables-100"])) {
         <?php
 
     }else{?>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+
         <?php
     }
 }
@@ -102,7 +82,7 @@ elseif (isset($_POST["tables-200"])) {
         setcookie($cookie_name, $value);
         ?>
 
-<!--        <center>YOUR SCORE IS --><?php //echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?><!--</center>-->
+
 
 
 
@@ -111,6 +91,14 @@ elseif (isset($_POST["tables-200"])) {
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -128,8 +116,6 @@ elseif (isset($_POST["tables-300"])) {
 
         setcookie($cookie_name, $value);
         ?>
-
-<!--       // <center>YOUR SCORE IS --><?php //echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?><!--</center>-->
 
 
         <?php
@@ -164,17 +150,19 @@ elseif (isset($_POST["tables-400"])) {
         setcookie($cookie_name, $value);
         ?>
 
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
-
-
-
-
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -192,14 +180,21 @@ elseif (isset($_POST["tables-500"])) {
 
         setcookie($cookie_name, $value);
         ?>
-<!--        //<center>YOUR SCORE IS --><?php //echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?><!--</center>-->
 
 
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
-        <a href="gameboard.php">Back to game</a>
+        <a href="gameboard.php">Back to game</a>        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
+
         <?php
     }
 }
@@ -221,14 +216,19 @@ elseif (isset($_POST["image-100"])) {
         setcookie($cookie_name, $value);
         ?>
 
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
-
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -247,13 +247,19 @@ elseif (isset($_POST["image-200"])) {
         setcookie($cookie_name, $value);
         ?>
 
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -273,16 +279,19 @@ elseif (isset($_POST["image-300"])) {
         setcookie($cookie_name, $value);
         ?>
 
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
-
-
-
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -310,6 +319,14 @@ elseif (isset($_POST["image-400"])) {
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
         <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
+        <?php
     }
 }
 
@@ -327,15 +344,20 @@ elseif (isset($_POST["image-500"])) {
 
         setcookie($cookie_name, $value);
         ?>
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
-
 
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -357,14 +379,19 @@ elseif (isset($_POST["forms-100"])) {
         setcookie($cookie_name, $value);
         ?>
 
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
-
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -384,14 +411,19 @@ elseif (isset($_POST["forms-200"])) {
         setcookie($cookie_name, $value);
         ?>
 
-        <center>YOUR SCORE IS: <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
-
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -412,17 +444,19 @@ elseif (isset($_POST["forms-300"])) {
         setcookie($cookie_name, $value);
         ?>
 
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
-
-
-
-
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -450,6 +484,14 @@ elseif (isset($_POST["forms-400"])) {
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
         <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
+        <?php
     }
 }
 
@@ -467,15 +509,20 @@ elseif (isset($_POST["forms-500"])) {
 
         setcookie($cookie_name, $value);
         ?>
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
-
 
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -504,7 +551,16 @@ elseif (isset($_POST["css-100"])) {
 
     }else{?>
         <h1>WRONG!</h1><br>
+        You will be redirected...<br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -532,6 +588,14 @@ elseif (isset($_POST["css-200"])) {
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
         <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
+        <?php
     }
 }
 
@@ -550,17 +614,19 @@ elseif (isset($_POST["css-300"])) {
         setcookie($cookie_name, $value);
         ?>
 
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
-
-
-
-
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -588,6 +654,15 @@ elseif (isset($_POST["css-400"])) {
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
         <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
+
+        <?php
     }
 }
 
@@ -605,15 +680,20 @@ elseif (isset($_POST["css-500"])) {
 
         setcookie($cookie_name, $value);
         ?>
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
-
 
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -636,14 +716,19 @@ elseif (isset($_POST["media-100"])) {
         setcookie($cookie_name, $value);
         ?>
 
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
-
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -662,15 +747,18 @@ elseif (isset($_POST["media-200"])) {
         setcookie($cookie_name, $value);
         ?>
 
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
-
-
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -690,14 +778,19 @@ elseif (isset($_POST["media-300"])) {
         setcookie($cookie_name, $value);
         ?>
 
-        <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
-
         <?php
 
     }else{?>
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
         <?php
     }
 }
@@ -725,6 +818,15 @@ elseif (isset($_POST["media-400"])) {
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
         <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
+
+        <?php
     }
 }
 
@@ -742,10 +844,6 @@ elseif (isset($_POST["media-500"])) {
 
         setcookie($cookie_name, $value);
     ?>
-    <center>YOUR SCORE IS <?php echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];?></center>
-
-
-
 
     <?php
 
@@ -753,10 +851,26 @@ elseif (isset($_POST["media-500"])) {
         <h1>WRONG!</h1><br>
         <a href="gameboard.php">Back to game</a>
         <?php
-    }
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
 
+        setcookie($cookie_name, $value);
+        ?>
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
+        $cookie_name = "score";
+        $_COOKIE[$cookie_name];
+        $value = (int) $_COOKIE["$cookie_name"];
+
+        setcookie($cookie_name, $value);
+        ?>
+        <?php
+    }
 }
-//echo "Your score is: ".$_COOKIE[$cookie_name];?>
+//echo "Your score is: ".$_COOKIE[$cookie_name];
+?>
 
 
 

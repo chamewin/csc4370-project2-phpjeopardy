@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE>
 <html>
 <head>
@@ -40,35 +38,10 @@
         }
     </style>
 </head>
-
-        <?php error_reporting(0);?>
-<?php score.session.session_start();
-$cookie_name = "score";
-if(!isset($_COOKIE[$cookie_name])) {
-//    echo "Cookie named '" . $cookie_name . "' is not set!";
-} else {
-    echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];
-
-
-}
-
-
-
-//
-//$cookie_name = "score";
-//$cookie_value = $_COOKIE[];
-//setcookie(score, $cookie_value); // 86400 = 1 day
-//echo "YOUR SCORE IS ".$_COOKIE[$cookie_name];
-?>
-
-
+<?php error_reporting(0);?>
+<?php score.session.session_start();?>
 <body>
-<div class="header">
-    <div class="right">
-        <p>Welcome, <?= $_SESSION['Username'] ?></p>
-        <a href="logout.php">Log Out</a>
-    </div>
-</div>
+<?php include("head.php");?>
 <div id="gameplay">
     <div class="grid grid-play" style="height:100vh; ">
         <div class="grid-row grid-row-cats" style="">
@@ -361,11 +334,6 @@ if(!isset($_COOKIE[$cookie_name])) {
         </div>
     </div>
 </div>
-<center>
-<!--    --><?php
-//    echo "YOUR SCORE IS " .$_COOKIE['score'];
-//    ?>
-</center>
 </body>
 </html>
 
